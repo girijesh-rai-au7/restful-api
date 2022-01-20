@@ -1,7 +1,10 @@
-// https://github.com/girijesh-rai-au7/q5-api
+// https://github.com/girijesh-rai-au7/restful-api
+//create operation using post method
+//Postman
 const express = require('express');
 
 const app = express()
+const port = process.env.PORT||3000
 
 
 const mongoose = require('mongoose')
@@ -34,6 +37,6 @@ app.post('/users', (req,res)=>{
         res.status(400).send(e)
     });//data received from postman saved in database escaleDB
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server is running")
 })
